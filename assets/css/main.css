@@ -13247,10 +13247,11 @@ table, th, td {
     background: #111111 !important; /* Dark background */
     border: 1px solid #333333 !important;
     border-radius: 15px;
-    overflow: hidden;
+    overflow: visible !important; /* Fix for cropped images */
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     position: relative;
     z-index: 1;
+    margin-top: 100px !important; /* Ensure spacing for popout */
 }
 
 /* Remove any pseudo-elements causing white gradients */
@@ -13260,8 +13261,10 @@ table, th, td {
 }
 
 .single-food-items .item-content {
-    background-color: #111111 !important;
+    background-color: transparent !important; /* Content bg should be transparent on top of card bg */
     padding-bottom: 25px;
+    position: relative; 
+    z-index: 2;
 }
 
 .single-food-items .item-content h3 {
