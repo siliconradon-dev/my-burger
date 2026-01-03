@@ -32,6 +32,269 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <!--<< Main.css >>-->
     <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        /* Severe Dark Mode Overrides */
+        body,
+        html,
+        .body-bg,
+        .bg-color2,
+        .white-bg,
+        .section-bg,
+        .gray-bg,
+        .bg-white,
+        .bg-color3 {
+            background-color: #0f0f0f !important;
+        }
+
+        /* Global White Removals */
+        .header-section,
+        .footer-section,
+        .offcanvas__content,
+        .offcanvas__info,
+        .offcanvas__wrapper,
+        footer,
+        .footer-widgets-wrapper {
+            background-color: #000000 !important;
+        }
+
+        /* Header & Logo specific fix */
+        .logo-image,
+        .logo,
+        .header-logo,
+        .main-header-wrapper .logo-image,
+        .offcanvas__logo {
+            background-color: transparent !important;
+            background: transparent !important;
+        }
+
+        /* Navbar White Bar Fix */
+        .mega-menu-wrapper,
+        .header-main,
+        .header-1,
+        #header-sticky,
+        .mean__menu-wrapper,
+        .main-menu {
+            background-color: #000000 !important;
+            background: #000000 !important;
+        }
+
+        /* About Us Section Fix */
+        .about-us-section,
+        .about-wrapper,
+        .about-us {
+            background-color: #0f0f0f !important;
+        }
+
+        /* Specific Component Backgrounds */
+        .single-food-items,
+        .dishes-card,
+        .offer-card,
+        .blog-card,
+        .menu-item-card,
+        .pricing-card-items,
+        .service-box-items,
+        .team-card-items,
+        .testimonial-card,
+        .widget,
+        .sidebar-area,
+        .product-cart-wrap,
+        .shop-sidebar,
+        .food-menu-tab-wrapper,
+        .single-menu-items,
+        .chefe-card,
+        .dishes-card.style1,
+        .blog-card.style1,
+        .testimonial-card.style1,
+        .fancy-box {
+            background-color: #1a1a1a !important;
+            background: #1a1a1a !important;
+            border: 1px solid #333 !important;
+            box-shadow: none !important;
+        }
+
+        /* Text Colors */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .title,
+        .sub-title,
+        .heading,
+        strong,
+        b,
+        .product-title,
+        .menu-content h3 {
+            color: #ffffff !important;
+        }
+
+        p,
+        span,
+        li,
+        a,
+        div,
+        label,
+        .text,
+        .price,
+        .menu-content p {
+            color: #cccccc !important;
+        }
+
+        /* Inputs */
+        input,
+        textarea,
+        select,
+        .nice-select,
+        .qty-input {
+            background-color: #222 !important;
+            color: #fff !important;
+            border: 1px solid #444 !important;
+        }
+
+        /* Navigation & Tables */
+        .main-menu ul li a {
+            color: #ffffff !important;
+        }
+
+        .cart-table table thead tr {
+            background-color: #222 !important;
+        }
+
+        table,
+        th,
+        td {
+            color: #ddd !important;
+            border-color: #333 !important;
+        }
+
+        /* Transparent Sections */
+        .banner-section,
+        .timer-section {
+            background-color: transparent !important;
+        }
+
+        /* Dropdowns & Modals */
+        .dropdown-menu,
+        .modal-content,
+        .header__right__dropdown__inner {
+            background-color: #1a1a1a !important;
+        }
+
+        /* Fix for specific white masking or overlays */
+        .food-menu-tab-wrapper::before,
+        .food-menu-tab-wrapper::after {
+            display: none !important;
+        }
+
+        .nav-pills .nav-link {
+            background-color: #222 !important;
+            color: #ccc !important;
+        }
+
+        .social-profile ul li a {
+            background-color: #333 !important;
+            color: #fff !important;
+        }
+
+        /* --- Enhanced Menu Section --- */
+
+        /* Tabs */
+        .food-menu-tab .nav-pills .nav-link {
+            background: #222 !important;
+            border: 1px solid #333 !important;
+            border-radius: 30px !important;
+            color: #ccc !important;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+            padding: 10px 25px !important;
+        }
+
+        .food-menu-tab .nav-pills .nav-link.active,
+        .food-menu-tab .nav-pills .nav-link:hover {
+            background: #d90429 !important;
+            /* Premium Red/Orange */
+            color: #fff !important;
+            border-color: #d90429 !important;
+            box-shadow: 0 4px 15px rgba(217, 4, 41, 0.4);
+        }
+
+        /* Menu Items Cards Override - Minimalist List Style */
+        .single-menu-items {
+            background: transparent !important;
+            border: none !important;
+            border-bottom: 1px dashed #333 !important;
+            border-radius: 0 !important;
+            padding: 15px 0 !important;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: none !important;
+        }
+
+        .single-menu-items:hover {
+            transform: none !important;
+            background: transparent !important;
+            border-bottom-color: #555 !important;
+            box-shadow: none !important;
+        }
+
+        .single-menu-items .menu-item-thumb img {
+            border-radius: 50%;
+            border: 2px solid #333;
+            width: 80px;
+            min-width: 80px;
+            height: 80px;
+            object-fit: cover;
+            margin-right: 20px;
+            transition: transform 0.4s ease;
+        }
+
+        .single-menu-items:hover .menu-item-thumb img {
+            transform: scale(1.1) rotate(5deg);
+            border-color: #d90429;
+        }
+
+        .single-menu-items .menu-content h3 {
+            font-size: 20px !important;
+            font-weight: 700 !important;
+            margin-bottom: 5px !important;
+            color: #fff !important;
+            text-transform: capitalize;
+        }
+
+        .single-menu-items .menu-content p {
+            font-size: 14px !important;
+            color: #999 !important;
+            margin: 0 !important;
+            font-style: italic;
+        }
+
+        /* Price Styling */
+        .single-menu-items h6 {
+            color: #d90429 !important;
+            font-size: 20px !important;
+            font-weight: 800 !important;
+            min-width: 100px;
+            text-align: right;
+        }
+
+        /* Testimonial Fix */
+        .testimonial-header .fancy-box {
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+
+        /* Footer Top Contact Info Fix - Remove Dark Box */
+        .footer-top .fancy-box {
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+    </style>
 </head>
 
 <body class="bg-color2">
@@ -104,7 +367,7 @@
                     <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
                         <div class="offcanvas__logo">
                             <a href="index-2.html">
-                                <img src="assets/img/logo/my-burger-logo-new.jpg" alt="logo-img">
+                                <img src="assets/img/logo/my-burger-logo-dark.png" alt="logo-img">
                             </a>
                         </div>
                         <div class="offcanvas__close">
@@ -665,7 +928,7 @@
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <div class="footer-wrapper d-flex align-items-center justify-content-between">
+                <div class="footer-wrapper d-flex align-items-center justify-content-center">
                     <p class="wow fadeInLeft" data-wow-delay=".3s">
                         All Rights Reserved | My Burger | Designed & Developed by Silicon Radon Networks (Pvt) Ltd
                     </p>
