@@ -44,10 +44,10 @@
         .bg-white,
         .bg-color3 {
             background-color: #0f0f0f !important;
+            font-family: 'Futura', 'Trebuchet MS', 'Arial', sans-serif !important;
         }
 
-        /* Global Font Override */
-        body,
+        /* Enforce Futura Font Everywhere */
         h1,
         h2,
         h3,
@@ -58,14 +58,13 @@
         span,
         a,
         li,
-        div,
         button,
         input,
         textarea,
-        select,
-        .term-text,
-        .term-title {
-            font-family: 'Futura', sans-serif !important;
+        label,
+        .title,
+        .sub-title {
+            font-family: 'Futura', 'Trebuchet MS', 'Arial', sans-serif !important;
         }
 
         /* Global White Removals */
@@ -670,6 +669,74 @@
                 max-width: 100% !important;
                 white-space: normal !important;
             }
+        }
+
+        /* Sidebar Recent Items Fix */
+        .recent-box {
+            display: flex !important;
+            align-items: center !important;
+            gap: 15px !important;
+            padding: 15px !important;
+            margin-bottom: 15px !important;
+            background: #1a1a1a !important;
+            /* Dark background */
+            border: 1px solid #333 !important;
+            /* Dark subtle border */
+            border-radius: 8px !important;
+            width: 100% !important;
+        }
+
+        .recent-box .recent-thumb {
+            width: 80px !important;
+            height: 80px !important;
+            flex-shrink: 0 !important;
+            border-radius: 50% !important;
+            /* Optional: circular thumb */
+            overflow: hidden !important;
+        }
+
+        .recent-box .recent-thumb img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+        }
+
+        .recent-content {
+            flex: 1 !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+        }
+
+        .recent-content a {
+            font-size: 16px !important;
+            font-weight: 600 !important;
+            color: #ffffff !important;
+            margin-bottom: 5px !important;
+            line-height: 1.3 !important;
+            white-space: normal !important;
+            /* Allow wrapping */
+        }
+
+        .recent-content .star {
+            margin-bottom: 5px !important;
+        }
+
+        .recent-content .price {
+            display: flex !important;
+            align-items: center !important;
+            gap: 10px !important;
+            font-size: 14px !important;
+        }
+
+        .recent-content .regular-price {
+            text-decoration: line-through !important;
+            color: #999 !important;
+        }
+
+        .recent-content .offer-price {
+            color: #d90429 !important;
+            font-weight: bold !important;
         }
     </style>
 </head>
