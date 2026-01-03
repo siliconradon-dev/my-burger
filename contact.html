@@ -294,6 +294,225 @@
             border: none !important;
             box-shadow: none !important;
         }
+
+        /* Pagination Dark Mode */
+        .page-nav-wrap ul li a {
+            background-color: #222 !important;
+            color: #fff !important;
+            border: 1px solid #333 !important;
+        }
+
+        .page-nav-wrap ul li a:hover,
+        .page-nav-wrap ul li a.active {
+            background-color: #d90429 !important;
+            color: #fff !important;
+            border-color: #d90429 !important;
+        }
+
+        .page-nav-wrap ul li a i {
+            color: inherit !important;
+        }
+
+        /* Footer Subscription Form Fix */
+        .single-footer-widget .form-control {
+            background-color: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+        }
+
+        .single-footer-widget .form-control input {
+            background-color: #222 !important;
+            border: 1px solid #444 !important;
+            color: #fff !important;
+            height: 50px !important;
+            padding-left: 20px !important;
+            border-radius: 5px !important;
+            width: 100% !important;
+        }
+
+        .single-footer-widget .form-control .submit-btn {
+            background-color: #d90429 !important;
+            color: #fff !important;
+            height: 50px !important;
+            width: 55px !important;
+            border-radius: 5px !important;
+            margin-left: 10px !important;
+        }
+
+        /* Fix for footer privacy policy checkbox */
+        .single-footer-widget .form-control.style2 {
+            display: flex !important;
+            align-items: center !important;
+            gap: 10px !important;
+        }
+
+        .single-footer-widget .form-control.style2 input {
+            width: 18px !important;
+            height: 18px !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            flex-shrink: 0 !important;
+            accent-color: #d90429 !important;
+        }
+
+        .single-footer-widget .form-control.style2 label {
+            color: #ccc !important;
+            margin: 0 !important;
+            width: auto !important;
+            line-height: normal !important;
+        }
+
+        /* Contact Cards Dark Mode */
+        .contact-box {
+            background-color: #1a1a1a !important;
+            border: 1px solid #333 !important;
+            box-shadow: none !important;
+            padding: 40px 20px !important;
+            height: 100% !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+            transition: transform 0.3s ease !important;
+        }
+
+        .contact-box:hover {
+            transform: translateY(-5px) !important;
+            border-color: #d90429 !important;
+        }
+
+        .contact-box .contact-icon {
+            margin-bottom: 25px !important;
+        }
+
+        .contact-box .title {
+            color: #ffffff !important;
+            font-size: 20px !important;
+            margin-bottom: 15px !important;
+            word-break: break-word !important;
+            overflow-wrap: break-word !important;
+            hyphens: auto !important;
+            max-width: 100% !important;
+            line-height: 1.4 !important;
+        }
+
+        .contact-box p {
+            color: #cccccc !important;
+            margin: 0 !important;
+            line-height: 1.6 !important;
+            font-size: 16px !important;
+        }
+
+        /* Contact Form Dark Mode */
+        .contact-form.style2 {
+            background-color: #1a1a1a !important;
+            padding: 40px !important;
+            border-radius: 8px !important;
+            box-shadow: none !important;
+        }
+
+        .contact-form.style2 h2 {
+            color: #fff !important;
+        }
+
+        .contact-form.style2 input,
+        .contact-form.style2 textarea,
+        .contact-form.style2 .nice-select {
+            background-color: #222 !important;
+            border: 1px solid #333 !important;
+            color: #fff !important;
+        }
+
+        .contact-form.style2 input::placeholder,
+        .contact-form.style2 textarea::placeholder {
+            color: #999 !important;
+        }
+
+        .contact-form.style2 .form-group label {
+            color: #ccc !important;
+        }
+
+        /* --- Responsive Styles --- */
+        @media (max-width: 767px) {
+            .contact-form.style2 {
+                padding: 25px 15px !important;
+            }
+
+            .contact-box {
+                padding: 30px 15px !important;
+                margin-bottom: 20px !important;
+            }
+
+            .contact-box .title {
+                font-size: 18px !important;
+            }
+
+            .footer-top .fancy-box {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                text-align: left !important;
+            }
+
+            .footer-top .fancy-box .item1 {
+                margin-bottom: 10px !important;
+            }
+
+            /* Footer Text Overflow Fix */
+            .footer-top .fancy-box p {
+                word-break: break-word !important;
+                overflow-wrap: break-word !important;
+                max-width: 100% !important;
+                white-space: normal !important;
+            }
+        }
+
+        /* Fix Cart Dropdown Visibility */
+        .header__right__dropdown__wrapper {
+            opacity: 0 !important;
+            visibility: hidden !important;
+            transform: translateY(10px) !important;
+            transition: all 0.3s ease-in-out !important;
+            z-index: 999 !important;
+        }
+
+        .header__cart:hover .header__right__dropdown__wrapper {
+            opacity: 1 !important;
+            visibility: visible !important;
+            transform: translateY(0) !important;
+        }
+
+        /* Offcanvas Menu Dark Mode Fixes */
+        .offcanvas__contact-text a,
+        .offcanvas__contact-text span,
+        .offcanvas__contact h4 {
+            color: #e0e0e0 !important;
+        }
+
+        .offcanvas__contact-text a:hover {
+            color: #d90429 !important;
+        }
+
+        .offcanvas__contact-text {
+            word-break: break-all !important;
+            /* Forces email breaking */
+            overflow-wrap: break-word !important;
+        }
+
+        /* Mobile Menu Link Visibility */
+        .mean-container .mean-nav ul li a {
+            color: #ffffff !important;
+            border-top: 1px solid #333 !important;
+            background: transparent !important;
+        }
+
+        .mean-container .mean-nav ul li a:hover {
+            color: #d90429 !important;
+        }
+
+        .mean-container .mean-bar {
+            background: transparent !important;
+        }
     </style>
 </head>
 
@@ -305,29 +524,32 @@
             <div class="spinner">
             </div>
             <div class="txt-loading">
-                <span data-text-preloader="F" class="letters-loading">
-                    F
+                <span data-text-preloader="M" class="letters-loading">
+                    M
+                </span>
+                <span data-text-preloader="Y" class="letters-loading">
+                    Y
+                </span>
+                <span data-text-preloader="-" class="letters-loading">
+                    &nbsp;
+                </span>
+                <span data-text-preloader="B" class="letters-loading">
+                    B
+                </span>
+                <span data-text-preloader="U" class="letters-loading">
+                    U
                 </span>
                 <span data-text-preloader="R" class="letters-loading">
                     R
                 </span>
-                <span data-text-preloader="E" class="letters-loading">
-                    E
-                </span>
-                <span data-text-preloader="S" class="letters-loading">
-                    S
-                </span>
-                <span data-text-preloader="H" class="letters-loading">
-                    H
+                <span data-text-preloader="G" class="letters-loading">
+                    G
                 </span>
                 <span data-text-preloader="E" class="letters-loading">
                     E
                 </span>
-                <span data-text-preloader="A" class="letters-loading">
-                    A
-                </span>
-                <span data-text-preloader="T" class="letters-loading">
-                    T
+                <span data-text-preloader="R" class="letters-loading">
+                    R
                 </span>
             </div>
             <p class="text-center">Loading</p>
@@ -805,9 +1027,8 @@
                             </div>
                             <div class="footer-content">
                                 <p>
-                                    Phasellus ultricies aliquam volutpat ullamcorper laoreet neque, a lacinia
-                                    curabitur
-                                    lacinia mollis
+                                    Welcome to My Burger! We serve the freshest, juiciest burgers in town,
+                                    crafted with love and premium ingredients. Taste the difference today!
                                 </p>
                                 <div class="social-icon d-flex align-items-center">
                                     <a href="#"><i class="fab fa-facebook-f"></i></a>

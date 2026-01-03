@@ -292,11 +292,177 @@
       border: none !important;
       box-shadow: none !important;
     }
+
+    /* --- Responsive Styles --- */
+    @media (max-width: 767px) {
+      .single-menu-items {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        position: relative !important;
+        padding-bottom: 40px !important;
+      }
+
+      .single-menu-items .menu-item-thumb img {
+        margin-right: 0 !important;
+        margin-bottom: 15px !important;
+      }
+
+      .single-menu-items .menu-content {
+        width: 100% !important;
+      }
+
+      .single-menu-items h6 {
+        text-align: left !important;
+        position: absolute !important;
+        bottom: 10px !important;
+        left: 0 !important;
+      }
+
+      .food-menu-tab .nav-pills .nav-link {
+        margin: 5px !important;
+        padding: 8px 15px !important;
+        font-size: 14px !important;
+      }
+
+      .footer-top .fancy-box {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+      }
+
+      .footer-top .fancy-box .item1 {
+        margin-bottom: 10px !important;
+      }
+
+      /* General Overflow Fixes */
+      .container,
+      .container-fluid {
+        overflow-x: hidden !important;
+        max-width: 100% !important;
+      }
+
+      .single-menu-items .menu-content p {
+        white-space: normal !important;
+        word-wrap: break-word !important;
+      }
+
+      /* Testimonial Fix */
+      .testimonial-card-items {
+        padding: 20px !important;
+      }
+
+      /* Footer Text Overflow Fix */
+      .footer-top .fancy-box p {
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+        max-width: 100% !important;
+        white-space: normal !important;
+      }
+    }
+
+    /* Fix Cart Dropdown Visibility */
+    .header__right__dropdown__wrapper {
+      opacity: 0 !important;
+      visibility: hidden !important;
+      transform: translateY(10px) !important;
+      transition: all 0.3s ease-in-out !important;
+      z-index: 999 !important;
+    }
+
+    .header__cart:hover .header__right__dropdown__wrapper {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: translateY(0) !important;
+    }
+
+    /* Offcanvas Menu Dark Mode Fixes */
+    .offcanvas__contact-text a,
+    .offcanvas__contact-text span,
+    .offcanvas__contact h4 {
+      color: #e0e0e0 !important;
+    }
+
+    .offcanvas__contact-text a:hover {
+      color: #d90429 !important;
+    }
+
+    .offcanvas__contact-text {
+      word-break: break-all !important;
+      /* Forces email breaking */
+      overflow-wrap: break-word !important;
+    }
+
+    /* Mobile Menu Link Visibility */
+    .mean-container .mean-nav ul li a {
+      color: #ffffff !important;
+      border-top: 1px solid #333 !important;
+      background: transparent !important;
+    }
+
+    .mean-container .mean-nav ul li a:hover {
+      color: #d90429 !important;
+    }
+
+    .mean-container .mean-bar {
+      background: transparent !important;
+    }
   </style>
 </head>
 
 <body class="bg-color2">
   <!-- Preloader Start -->
+  <div id="preloader" class="preloader">
+    <div class="animation-preloader">
+      <div class="spinner">
+      </div>
+      <div class="txt-loading">
+        <span data-text-preloader="M" class="letters-loading">
+          M
+        </span>
+        <span data-text-preloader="Y" class="letters-loading">
+          Y
+        </span>
+        <span data-text-preloader="-" class="letters-loading">
+          &nbsp;
+        </span>
+        <span data-text-preloader="B" class="letters-loading">
+          B
+        </span>
+        <span data-text-preloader="U" class="letters-loading">
+          U
+        </span>
+        <span data-text-preloader="R" class="letters-loading">
+          R
+        </span>
+        <span data-text-preloader="G" class="letters-loading">
+          G
+        </span>
+        <span data-text-preloader="E" class="letters-loading">
+          E
+        </span>
+        <span data-text-preloader="R" class="letters-loading">
+          R
+        </span>
+      </div>
+      <p class="text-center">Loading</p>
+    </div>
+    <div class="loader">
+      <div class="row">
+        <div class="col-3 loader-section section-left">
+          <div class="bg"></div>
+        </div>
+        <div class="col-3 loader-section section-left">
+          <div class="bg"></div>
+        </div>
+        <div class="col-3 loader-section section-right">
+          <div class="bg"></div>
+        </div>
+        <div class="col-3 loader-section section-right">
+          <div class="bg"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!--<< Mouse Cursor Start >>-->
   <div class="mouse-cursor cursor-outer"></div>
@@ -2576,8 +2742,8 @@
               </div>
               <div class="footer-content">
                 <p>
-                  Phasellus ultricies aliquam volutpat ullamcorper laoreet
-                  neque, a lacinia curabitur lacinia mollis
+                  Welcome to My Burger! We serve the freshest, juiciest burgers in town,
+                  crafted with love and premium ingredients. Taste the difference today!
                 </p>
                 <div class="social-icon d-flex align-items-center">
                   <a href="#"><i class="fab fa-facebook-f"></i></a>
