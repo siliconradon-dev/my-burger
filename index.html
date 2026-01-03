@@ -196,9 +196,28 @@
 
     /* Dropdowns & Modals */
     .dropdown-menu,
-    .modal-content,
+    .modal-content {
+      background-color: #1a1a1a !important;
+    }
+
+    /* Cart Dropdown Dark Mode Fix */
+    .header__right__dropdown__wrapper,
     .header__right__dropdown__inner {
       background-color: #1a1a1a !important;
+      background: #1a1a1a !important;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    .single__header__right__dropdown .header__right__dropdown__content a h6 {
+      color: #ffffff !important;
+    }
+
+    .header__right__dropdown__total p {
+      color: #cccccc !important;
+    }
+
+    .header__right__dropdown__total span {
+      color: #ffffff !important;
     }
 
     /* Fix for specific white masking or overlays */
@@ -453,7 +472,8 @@
 
 <body class="bg-color2">
   <!-- Preloader Start -->
-  <div id="preloader" class="preloader">
+  <!-- Preloader Start -->
+  <!-- <div id="preloader" class="preloader">
     <div class="animation-preloader">
       <div class="spinner">
       </div>
@@ -504,7 +524,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!--<< Mouse Cursor Start >>-->
   <div class="mouse-cursor cursor-outer"></div>
@@ -2361,9 +2381,8 @@
       <div class="container">
         <div class="row d-flex justify-content-center">
           <div class="col-xl-5 d-flex align-items-center justify-content-center">
-            <div class="video-wrap cir36">
-              <a href="https://www.youtube.com/watch?v=f2Gzr8sAGB8" class="play-btn popup-video"><img
-                  src="assets/img/shape/player.svg" alt="icon" /></a>
+            <div class="video-wrap cir36" style="display: none !important;">
+              <!-- Video button removed -->
             </div>
           </div>
           <div class="col-xl-7">
