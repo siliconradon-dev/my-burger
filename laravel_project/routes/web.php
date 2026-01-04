@@ -21,3 +21,4 @@ Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/shop', [PageController::class, 'shop'])->name('shop');
 Route::get('/blog', [PageController::class, 'blog'])->name('blog');
 Route::get('/cart', [PageController::class, 'cart'])->name('cart');
+Route::get('/checkout', [PageController::class, 'checkout'])->name('checkout');

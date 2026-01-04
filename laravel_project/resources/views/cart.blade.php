@@ -528,6 +528,73 @@
                 max-width: 100% !important;
                 white-space: normal !important;
             }
+
+            /* --- Responsive Cart Table --- */
+            .cart_table thead {
+                display: none;
+            }
+
+            .cart_table tbody tr {
+                display: block;
+                margin-bottom: 20px;
+                border: 1px solid #333;
+                background: #1a1a1a;
+                border-radius: 8px;
+            }
+
+            .cart_table tbody tr td {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid #333 !important;
+                padding: 15px !important;
+                text-align: right;
+            }
+
+            .cart_table tbody tr td:last-child {
+                border-bottom: none !important;
+            }
+
+            .cart_table tbody tr td::before {
+                content: attr(data-title);
+                font-weight: 700;
+                color: #fff;
+                margin-right: 15px;
+                text-transform: uppercase;
+                font-size: 14px;
+            }
+
+            .cart_table .cartimage {
+                width: 60px;
+                height: 60px;
+                margin-left: auto;
+            }
+
+            /* Stack Coupon Section and Actions */
+            .th-cart-coupon {
+                float: none;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                margin-bottom: 20px;
+            }
+
+            .th-cart-coupon .form-control {
+                width: 100%;
+            }
+
+            .actions {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .actions > .theme-btn {
+                float: none;
+                width: 100%;
+                margin: 0;
+            }
         }
 
         /* Fix Cart Dropdown Visibility */
@@ -761,6 +828,7 @@
             margin-top: 30px;
             border-radius: 8px 8px 0 0;
             font-size: 22px;
+            color: #fff !important;
         }
 
         .cart_totals {
@@ -775,15 +843,25 @@
         .cart_totals tbody tr th,
         .cart_totals tfoot tr td, 
         .cart_totals tfoot tr th {
+            background-color: #1a1a1a !important; /* Force dark background */
             border-bottom: 1px solid #333;
             padding: 15px 20px;
             color: #ccc;
+        }
+        
+        /* Specific targeting for the first column which might be behaving like a header or just a first child */
+        .cart_totals tr td:first-child,
+        .cart_totals tr th:first-child {
+             background-color: #1a1a1a !important;
+             color: #fff !important;
+             font-weight: 600;
         }
         
         .cart_totals tbody tr th {
             width: 40%;
             font-weight: 600;
             color: #fff;
+            background-color: #1a1a1a !important;
         }
 
         .cart_totals .amount {
