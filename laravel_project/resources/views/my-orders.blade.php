@@ -129,5 +129,19 @@
     .profile-nav .nav-link.active {
         background-color: #d90429 !important;
     }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 767px) {
+        .account-wrapper {
+            padding: 15px !important;
+        }
+        .account-card {
+            padding: 20px !important;
+        }
+        .profile-header img {
+            width: 80px !important;
+            height: 80px !important;
+        }
+    }
 </style>
 @endsection

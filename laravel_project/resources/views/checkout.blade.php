@@ -578,7 +578,7 @@
     <!-- Footer Placeholder -->
     <div id="footer-placeholder"></div>
 @endsection
-
+ 
 @push('scripts')
     <!-- Components Loader -->
     <script src="{{ asset('assets/js/components-loader.js') }}"></script>

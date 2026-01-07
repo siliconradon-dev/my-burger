@@ -55,4 +55,14 @@ class PageController extends Controller
     {
         return view('my-orders');
     }
+
+    public function login()
+    {
+        return view('login');
+    }
+
+    public function signup()
+    {
+        return view('signup');
+    }
 }

@@ -5,7 +5,7 @@
 <!--<< Header Area >>-->
 
 
-<!-- Mirrored from gramentheme.com/html/fresheat/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Jul 2025 07:05:54 GMT -->
+<!-- Mirrored from gramentheme.com/html/myburger/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Jul 2025 07:05:54 GMT -->
 
 <head>
     <!-- ========== Meta Tags ========== -->
@@ -13,9 +13,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="gramentheme">
-    <meta name="description" content="Fresheat food & Restaurant Html Template">
+    <meta name="description" content="My Burger - Food & Restaurant">
     <!-- ======== Page title ============ -->
-    <title>Fresheat food & Restaurant Html Template</title>
+    <title>My Burger - Food & Restaurant</title>
     <!--<< Favcion >>-->
     <link rel="shortcut icon" href="assets/img/favicon.png">
     <!--<< Bootstrap min.css >>-->

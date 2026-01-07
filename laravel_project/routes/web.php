@@ -24,3 +24,5 @@ Route::get('/cart', [PageController::class, 'cart'])->name('cart');
 Route::get('/checkout', [PageController::class, 'checkout'])->name('checkout');
 Route::get('/profile', [PageController::class, 'profile'])->name('profile');
 Route::get('/my-orders', [PageController::class, 'myOrders'])->name('my-orders');
+Route::get('/login', [PageController::class, 'login'])->name('login');
+Route::get('/signup', [PageController::class, 'signup'])->name('signup');
