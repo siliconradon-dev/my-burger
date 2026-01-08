@@ -65,4 +65,9 @@ class PageController extends Controller
     {
         return view('signup');
     }
+
+    public function accountDetails()
+    {
+        return view('account-details');
+    }
 }

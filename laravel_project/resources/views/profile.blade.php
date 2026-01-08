@@ -49,7 +49,7 @@
                                         <a class="nav-link text-white" href="#">Addresses</a>
                                     </li>
                                     <li class="nav-item mb-2">
-                                        <a class="nav-link text-white" href="#">Account Details</a>
+                                        <a class="nav-link text-white" href="{{ route('account-details') }}">Account Details</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="javascript:void(0)" onclick="event.preventDefault(); document.getElementById('logout-side-form').submit();" class="nav-link text-white"><i class="fas fa-sign-out-alt me-2"></i> Logout</a>

@@ -26,6 +26,8 @@ Route::get('/cart', [PageController::class, 'cart'])->name('cart');
 Route::get('/checkout', [PageController::class, 'checkout'])->name('checkout');
 Route::get('/profile', [PageController::class, 'profile'])->name('profile');
 Route::get('/my-orders', [PageController::class, 'myOrders'])->name('my-orders');
+Route::get('/account-details', [PageController::class, 'accountDetails'])->name('account-details');
+Route::post('/account-details/update', [AuthController::class, 'updateProfile'])->name('account-details.update');
 // Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
 // Route::post('/login', [AuthController::class, 'login'])->name('login.post');
 // Route::get('/signup', [AuthController::class, 'showSignup'])->name('signup');
