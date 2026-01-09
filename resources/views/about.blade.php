@@ -105,11 +105,11 @@
                                         class="ms-1" src="{{ asset('assets/img/icon/titleIcon.svg') }}" alt="icon">
                                 </div>
                                 <h2 class="title wow fadeInUp" data-wow-delay="0.7s">
-                                    Variety of flavours from american cuisine
+                                    Crafting Culinary Excellence Across Sri Lanka
                                 </h2>
-                                <div class="text wow fadeInUp" data-wow-delay="0.8s">It is a long established fact that
-                                    a reader will be distracted the readable content of a page when looking at layout
-                                    the point established fact that</div>
+                                <div class="text wow fadeInUp" data-wow-delay="0.8s">
+                                    Since our journey began, My Burger has been dedicated to bridging the gap between premium American fast food and authentic local and Indian flavours. Whether you're dining in Kurunegala, Thihariya, Anuradhapura, or Kandy, our commitment remains the same: juicy patties, aromatic spices, and an unforgettable dining experience.
+                                </div>
                                 <div class="btn-wrapper wow fadeInUp" data-wow-delay="0.9s">
                                     <a class="theme-btn" href="{{ route('menu') }}">ORDER NOW <i
                                             class="fa-sharp fa-regular fa-arrow-right"></i></a>
@@ -124,20 +124,20 @@
             <div class="marquee-inner to-left">
                 <ul class="marqee-list d-flex">
                     <li class="marquee-item style1">
-                        <span class="text-slider"></span><span class="text-slider text-style">chicken pizza</span>
-                        <span class="text-slider"></span><span class="text-slider text-style">GRILLED CHICKEN</span>
-                        <span class="text-slider"></span><span class="text-slider text-style">BURGER</span>
-                        <span class="text-slider"></span><span class="text-slider text-style">CHICKEN PIZZA</span>
-                        <span class="text-slider"></span><span class="text-slider text-style">FRESH PASTA</span>
-                        <span class="text-slider"></span><span class="text-slider text-style">ITALIANO FRENCH FRY</span>
-                        <span class="text-slider"></span><span class="text-slider text-style">CHICKEN FRY</span>
-                        <span class="text-slider"></span><span class="text-slider text-style">chicken pizza</span>
-                        <span class="text-slider"></span><span class="text-slider text-style">GRILLED CHICKEN</span>
-                        <span class="text-slider"></span><span class="text-slider text-style">BURGER</span>
-                        <span class="text-slider"></span><span class="text-slider text-style">CHICKEN PIZZA</span>
-                        <span class="text-slider"></span><span class="text-slider text-style">FRESH PASTA</span>
-                        <span class="text-slider"></span><span class="text-slider text-style">ITALIANO FRENCH FRY</span>
-                        <span class="text-slider"></span><span class="text-slider text-style">CHICKEN FRY</span>
+                        <span class="text-slider"></span><span class="text-slider text-style">ZINGER BURGER</span>
+                        <span class="text-slider"></span><span class="text-slider text-style">SAWAN FEAST</span>
+                        <span class="text-slider"></span><span class="text-slider text-style">MY BURGER SPECIAL</span>
+                        <span class="text-slider"></span><span class="text-slider text-style">BIRIYANI SAWAN</span>
+                        <span class="text-slider"></span><span class="text-slider text-style">SAUDI CHAMPAGNE</span>
+                        <span class="text-slider"></span><span class="text-slider text-style">BLUE LAGOON</span>
+                        <span class="text-slider"></span><span class="text-slider text-style">CHEESE KOTTU</span>
+                        <span class="text-slider"></span><span class="text-slider text-style">ZINGER BURGER</span>
+                        <span class="text-slider"></span><span class="text-slider text-style">SAWAN FEAST</span>
+                        <span class="text-slider"></span><span class="text-slider text-style">MY BURGER SPECIAL</span>
+                        <span class="text-slider"></span><span class="text-slider text-style">BIRIYANI SAWAN</span>
+                        <span class="text-slider"></span><span class="text-slider text-style">SAUDI CHAMPAGNE</span>
+                        <span class="text-slider"></span><span class="text-slider text-style">BLUE LAGOON</span>
+                        <span class="text-slider"></span><span class="text-slider text-style">CHEESE KOTTU</span>
                     </li>
                 </ul>
             </div>

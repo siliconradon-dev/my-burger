@@ -36,7 +36,7 @@ const handleImageUpload = (event) => {
                 <p class="text-gray-400 text-sm mt-1">Create a new item for your menu.</p>
             </div>
 
-            <div class="bg-gray-800 rounded-lg shadow-lg p-6 border border-gray-700">
+            <div class="bg-gray-800 rounded-lg shadow-lg p-4 sm:p-6 border border-gray-700">
                 <form @submit.prevent="submit" class="space-y-6">
                     <!-- Product Name -->
                     <div>

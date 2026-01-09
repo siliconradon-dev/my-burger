@@ -39,8 +39,8 @@ const getStatusColor = (status) => {
                     <thead>
                         <tr class="bg-gray-900/50 text-gray-400 text-xs uppercase tracking-wider border-b border-gray-700">
                             <th class="p-4 font-medium">Name</th>
-                            <th class="p-4 font-medium">Email</th>
-                            <th class="p-4 font-medium">Date Joined</th>
+                            <th class="p-4 font-medium hidden sm:table-cell">Email</th>
+                            <th class="p-4 font-medium hidden md:table-cell">Date Joined</th>
                             <th class="p-4 font-medium text-right">Actions</th>
                         </tr>
                     </thead>
@@ -48,16 +48,19 @@ const getStatusColor = (status) => {
                         <tr v-for="user in users.data" :key="user.id" class="hover:bg-gray-750 transition-colors">
                             <td class="p-4">
                                 <div class="flex items-center gap-3">
-                                    <div class="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center text-xs font-bold text-white">
+                                    <div class="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center text-xs font-bold text-white flex-shrink-0">
                                         {{ user.name.charAt(0) }}
                                     </div>
-                                    <span class="font-medium text-white">{{ user.name }}</span>
+                                    <div class="flex flex-col min-w-0">
+                                        <span class="font-medium text-white truncate">{{ user.name }}</span>
+                                        <span class="text-xs text-gray-400 sm:hidden truncate">{{ user.email }}</span>
+                                    </div>
                                 </div>
                             </td>
-                            <td class="p-4 text-gray-300">{{ user.email }}</td>
-                            <td class="p-4 text-gray-400 text-sm">{{ new Date(user.created_at).toLocaleDateString() }}</td>
+                            <td class="p-4 text-gray-300 hidden sm:table-cell truncate max-w-[200px]">{{ user.email }}</td>
+                            <td class="p-4 text-gray-400 text-sm hidden md:table-cell whitespace-nowrap">{{ new Date(user.created_at).toLocaleDateString() }}</td>
                             <td class="p-4 text-right">
-                                <button class="inline-flex items-center px-2 py-1 bg-gray-700 text-gray-300 border border-gray-600 rounded hover:bg-gray-600 hover:text-white transition-colors text-xs" title="View Profile">
+                                <button class="inline-flex items-center px-3 py-1 bg-gray-700 text-gray-300 border border-gray-600 rounded hover:bg-gray-600 hover:text-white transition-colors text-xs" title="View Profile">
                                     View
                                 </button>
                             </td>

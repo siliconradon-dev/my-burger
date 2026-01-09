@@ -3,10 +3,15 @@ import SideBar from '@/Components/Main/SideBar.vue';
 import Header from '@/Components/Main/Header.vue';
 import Footer from '@/Components/Main/Footer.vue';
 import { usePage } from '@inertiajs/vue3';
-import { watch } from 'vue';
+import { watch, ref } from 'vue';
 import Swal from 'sweetalert2';
 
 const page = usePage();
+const isSidebarOpen = ref(false);
+
+const toggleSidebar = () => {
+    isSidebarOpen.value = !isSidebarOpen.value;
+};
 
 watch(() => page.props.flash, (flash) => {
     if (flash?.success) {
@@ -80,15 +85,22 @@ watch(() => page.props.flash, (flash) => {
 </script>
 
 <template>
-    <div class="flex h-screen bg-gray-900 font-roboto text-gray-100">
+    <div class="flex h-screen bg-gray-900 font-roboto text-gray-100 overflow-hidden">
+        <!-- Overlay -->
+        <div 
+            v-if="isSidebarOpen" 
+            @click="isSidebarOpen = false" 
+            class="fixed inset-0 z-20 bg-black opacity-50 transition-opacity lg:hidden"
+        ></div>
+
         <!-- Sidebar -->
-        <SideBar />
+        <SideBar :is-open="isSidebarOpen" />
 
         <!-- Main Content -->
         <div class="flex-1 flex flex-col overflow-hidden">
-            <Header />
+            <Header @toggle-sidebar="toggleSidebar" />
 
-            <main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-800 p-6">
+            <main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-800 p-4 sm:p-6">
                 <!-- Content injected here -->
                 <slot />
             </main>

@@ -47,12 +47,12 @@ const chartSeries = [
     <Head title="Dashboard" />
 
     <DashboardLayout>
-        <div class="mb-8 flex justify-between items-center">
+        <div class="mb-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
             <div>
-                <h1 class="text-3xl font-bold text-white">Dashboard</h1>
+                <h1 class="text-2xl sm:text-3xl font-bold text-white">Dashboard</h1>
                 <p class="text-gray-400 mt-1">Welcome back, Admin! Here's what's happening today.</p>
             </div>
-            <button class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-colors flex items-center shadow-lg shadow-red-600/20">
+            <button class="w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-colors flex items-center justify-center shadow-lg shadow-red-600/20">
                 <ArrowDownIcon class="w-5 h-5 mr-2" />
                 Download Report
             </button>

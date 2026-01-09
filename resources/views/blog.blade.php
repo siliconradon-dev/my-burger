@@ -44,13 +44,14 @@
                                             Admin</span></div>
                                 </div>
                                 <div class="item3">
-                                    <div class="icon"><img src="{{ asset('assets/img/icon/tag.svg') }}" alt="icon"><span>Noodles</span>
+                                    <div class="icon"><img src="{{ asset('assets/img/icon/tag.svg') }}" alt="icon"><span>Feasts</span>
                                     </div>
                                 </div>
                             </div>
-                            <a href="blog-details.html">
-                                <h3>Fast Food Frenzy a Taste of Convenience</h3>
+                            <a href="#">
+                                <h3>The Secret Behind Our Legendary Sawan Feast</h3>
                             </a>
+                            <p class="mt-2 text-white">Experience the ultimate sharing platter featuring Chicken Biriyani, fried chicken, beef kuruma, and classic Sri Lankan accompaniments—perfect for 6-7 people.</p>
                             <a href="blog-details.html" class="link-btn">
                                 <span>Read More</span> <i class="fa-solid fa-arrow-right-long"></i>
                             </a>
@@ -71,13 +72,14 @@
                                             Admin</span></div>
                                 </div>
                                 <div class="item3">
-                                    <div class="icon"><img src="{{ asset('assets/img/icon/tag.svg') }}" alt="icon"><span>Chicken</span>
+                                    <div class="icon"><img src="{{ asset('assets/img/icon/tag.svg') }}" alt="icon"><span>Signature</span>
                                     </div>
                                 </div>
                             </div>
-                            <a href="blog-details.html">
-                                <h3>Benefits of health and safety measures</h3>
+                            <a href="#">
+                                <h3>Why the "My Burger Special" is the Talk of the Town</h3>
                             </a>
+                            <p class="mt-2 text-white">Our signature burger isn't just a meal; it's a Kurunegala legend. Discover the blend of premium beef, secret sauce, and fresh local ingredients.</p>
                             <a href="blog-details.html" class="link-btn">
                                 <span>Read More</span> <i class="fa-solid fa-arrow-right-long"></i>
                             </a>
@@ -98,13 +100,14 @@
                                             Admin</span></div>
                                 </div>
                                 <div class="item3">
-                                    <div class="icon"><img src="{{ asset('assets/img/icon/tag.svg') }}" alt="icon"><span>Noodles</span>
+                                    <div class="icon"><img src="{{ asset('assets/img/icon/tag.svg') }}" alt="icon"><span>Refreshments</span>
                                     </div>
                                 </div>
                             </div>
-                            <a href="blog-details.html">
-                                <h3>Quick Cravings Unraveling Fast Food Delights</h3>
+                            <a href="#">
+                                <h3>Beat the Heat with Saudi Champagne & Blue Lagoon</h3>
                             </a>
+                            <p class="mt-2 text-white">From the sparkling depth of Saudi Champagne to the tropical cool of the Blue Lagoon Mojito, our mocktails are the perfect summer escape.</p>
                             <a href="blog-details.html" class="link-btn">
                                 <span>Read More</span> <i class="fa-solid fa-arrow-right-long"></i>
                             </a>

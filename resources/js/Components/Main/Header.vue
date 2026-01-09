@@ -1,22 +1,34 @@
 <script setup>
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue';
-import { UserCircleIcon, ChevronDownIcon } from '@heroicons/vue/24/outline';
+import { UserCircleIcon, ChevronDownIcon, Bars3Icon } from '@heroicons/vue/24/outline';
 import { Link } from '@inertiajs/vue3';
+
+defineEmits(['toggle-sidebar']);
 </script>
 
 <template>
-    <header class="bg-gray-900 border-b border-gray-800 shadow-sm h-16 flex justify-between items-center px-6">
-        <h2 class="font-semibold text-xl text-gray-200 leading-tight">
-            Admin Panel
-        </h2>
+    <header class="bg-gray-900 border-b border-gray-800 shadow-sm h-16 flex justify-between items-center px-4 sm:px-6">
+        <div class="flex items-center">
+            <!-- Hamburger Menu Button -->
+            <button 
+                @click="$emit('toggle-sidebar')" 
+                class="p-2 mr-4 rounded-lg text-gray-400 hover:bg-gray-800 hover:text-white lg:hidden transition-colors"
+            >
+                <Bars3Icon class="h-6 w-6" />
+            </button>
+
+            <h2 class="font-semibold text-lg sm:text-xl text-gray-200 leading-tight">
+                Admin Panel
+            </h2>
+        </div>
 
         <div class="flex items-center">
             <Menu as="div" class="relative ml-3">
                 <div>
                     <MenuButton class="flex items-center text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition bg-gray-800 p-1">
                         <UserCircleIcon class="h-8 w-8 text-gray-400" />
-                        <span class="ml-2 text-gray-300 hidden md:block">Admin</span>
-                        <ChevronDownIcon class="h-4 w-4 ml-1 text-gray-400 hidden md:block" />
+                        <span class="ml-2 text-gray-300 hidden sm:block">Admin</span>
+                        <ChevronDownIcon class="h-4 w-4 ml-1 text-gray-400 hidden sm:block" />
                     </MenuButton>
                 </div>
                 <transition

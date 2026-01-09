@@ -852,12 +852,10 @@
                                         class="ms-1" src="assets/img/icon/titleIcon.svg" alt="icon" />
                                 </div>
                                 <h2 class="title wow fadeInUp" data-wow-delay="0.7s">
-                                    Variety of flavours from american cuisine
+                                    A Fusion of Flavours from Global Kitchens
                                 </h2>
                                 <div class="text wow fadeInUp" data-wow-delay="0.8s">
-                                    It is a long established fact that a reader will be
-                                    distracted the readable content of a page when looking at
-                                    layout the point established fact that
+                                    From the sizzle of our signature American-style beef patties to the rich, aromatic spices of authentic Indian Biriyani, we bring you a world of taste. With branches across Kurunegala, Thihariya, Anuradhapura, and Kandy, My Burger is where premium quality meets local passion.
                                 </div>
                                 <div class="btn-wrapper wow fadeInUp" data-wow-delay="0.9s">
                                     <a class="theme-btn" href="#">ORDER NOW
@@ -969,10 +967,7 @@
                                                     customer reviews)</a>
                                             </div>
                                             <p class="text">
-                                                Aliquam hendrerit a augue insuscipit. Etiam aliquam
-                                                massa quis des mauris commodo venenatis ligula commodo
-                                                leez sed blandit convallis dignissim onec vel
-                                                pellentesque neque.
+                                                Sink your teeth into our perfectly seasoned, juicy patties, crafted with freshly prepared ingredients and served on toasted artisanal buns for that ultimate premium bite.
                                             </p>
 
                                             <div class="actions">
@@ -1554,13 +1549,14 @@
                                                 <div class="item3">
                                                     <div class="icon">
                                                         <img src="assets/img/icon/tag.svg"
-                                                            alt="icon" /><span>Noodles</span>
+                                                            alt="icon" /><span>Feasts</span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <a href="#">
-                                                <h3>Fast Food Frenzy a Taste of Convenience</h3>
+                                                <h3>The Secret Behind Our Legendary Sawan Feast</h3>
                                             </a>
+                                            <p class="mt-3">Discover why our Chicken Biriyani Sawan—complete with full fried chicken and Watalappam—is the ultimate sharing experience for your next family gathering.</p>
                                             <a href="#" class="link-btn">
                                                 <span>Read More</span>
                                                 <i class="fa-solid fa-arrow-right-long"></i>
@@ -1588,13 +1584,14 @@
                                                 <div class="item3">
                                                     <div class="icon">
                                                         <img src="assets/img/icon/tag.svg"
-                                                            alt="icon" /><span>Chicken</span>
+                                                            alt="icon" /><span>Signature</span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <a href="#">
-                                                <h3>Benefits of health and safety measures</h3>
+                                                <h3>Kurunegala's Most Wanted: The Special Burger</h3>
                                             </a>
+                                            <p class="mt-3">From the first bite to the last, find out why our signature My Burger Special has become the talk of the town and a local favorite.</p>
                                             <a href="#" class="link-btn">
                                                 <span>Read More</span>
                                                 <i class="fa-solid fa-arrow-right-long"></i>
@@ -1622,13 +1619,14 @@
                                                 <div class="item3">
                                                     <div class="icon">
                                                         <img src="assets/img/icon/tag.svg"
-                                                            alt="icon" /><span>Noodles</span>
+                                                            alt="icon" /><span>Beverages</span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <a href="#">
-                                                <h3>Quick Cravings Unraveling Fast Food Delights</h3>
+                                                <h3>Beating the Heat: Blue Lagoon & Saudi Champagne</h3>
                                             </a>
+                                            <p class="mt-3">Stay refreshed with our vibrant Blue Lagoon Mojito or our signature Saudi Champagne—the perfect sparkling companion to your spicy meal.</p>
                                             <a href="#" class="link-btn">
                                                 <span>Read More</span>
                                                 <i class="fa-solid fa-arrow-right-long"></i>

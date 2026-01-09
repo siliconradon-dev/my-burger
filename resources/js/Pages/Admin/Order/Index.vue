@@ -86,20 +86,20 @@ const formatDate = (dateString) => {
         </div>
 
         <!-- Filters & Search -->
-        <div class="bg-gray-800 p-4 rounded-t-xl border-b border-gray-700 flex flex-col sm:flex-row gap-4 justify-between items-center">
-            <div class="relative w-full sm:w-64">
+        <div class="bg-gray-800 p-4 rounded-t-xl border-b border-gray-700 flex flex-col lg:flex-row gap-4 justify-between items-center">
+            <div class="relative w-full lg:w-64">
                 <MagnifyingGlassIcon class="w-5 h-5 absolute left-3 top-2.5 text-gray-500" />
                 <input type="text" placeholder="Search orders..." class="w-full bg-gray-900 border border-gray-700 text-gray-300 rounded-lg pl-10 pr-4 py-2 focus:ring-1 focus:ring-red-500 focus:border-red-500 placeholder-gray-600" />
             </div>
-            <div class="flex gap-2">
-                <select class="bg-gray-900 border border-gray-700 text-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-1 focus:ring-red-500">
+            <div class="flex flex-wrap sm:flex-nowrap gap-2 w-full lg:w-auto">
+                <select class="bg-gray-900 border border-gray-700 text-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-1 focus:ring-red-500 flex-1">
                     <option>All Status</option>
                     <option>Pending</option>
                     <option>Processing</option>
                     <option>Completed</option>
                     <option>Cancelled</option>
                 </select>
-                <select class="bg-gray-900 border border-gray-700 text-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-1 focus:ring-red-500">
+                <select class="bg-gray-900 border border-gray-700 text-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-1 focus:ring-red-500 flex-1">
                     <option>Latest First</option>
                     <option>Oldest First</option>
                 </select>
@@ -114,8 +114,8 @@ const formatDate = (dateString) => {
                         <tr class="bg-gray-900/50 text-gray-400 text-xs uppercase tracking-wider border-b border-gray-700">
                             <th class="p-4 font-medium">Order ID</th>
                             <th class="p-4 font-medium">Customer</th>
-                            <th class="p-4 font-medium">Date</th>
-                            <th class="p-4 font-medium">Items</th>
+                            <th class="p-4 font-medium hidden md:table-cell">Date</th>
+                            <th class="p-4 font-medium hidden sm:table-cell">Items</th>
                             <th class="p-4 font-medium">Total</th>
                             <th class="p-4 font-medium">Status</th>
                             <th class="p-4 font-medium text-right">Actions</th>
@@ -123,25 +123,30 @@ const formatDate = (dateString) => {
                     </thead>
                     <tbody class="divide-y divide-gray-700">
                         <tr v-for="order in orders.data" :key="order.id" class="hover:bg-gray-750 transition-colors">
-                            <td class="p-4 font-medium text-white">#{{ order.id }}</td>
-                            <td class="p-4 text-gray-300">
-                                {{ order.user ? order.user.name : (order.first_name + ' ' + order.last_name) }}
+                            <td class="p-4 font-medium text-white">
+                                <div>#{{ order.id }}</div>
+                                <div class="text-[10px] text-gray-500 md:hidden">{{ formatDate(order.created_at) }}</div>
                             </td>
-                            <td class="p-4 text-gray-400 text-sm">{{ formatDate(order.created_at) }}</td>
-                            <td class="p-4 text-gray-300">{{ order.items ? order.items.length : 0 }}</td>
-                            <td class="p-4 text-white font-bold">{{ formatCurrency(order.total_amount) }}</td>
+                            <td class="p-4 text-gray-300">
+                                <div class="truncate max-w-[120px] sm:max-w-none">
+                                    {{ order.user ? order.user.name : (order.first_name + ' ' + order.last_name) }}
+                                </div>
+                            </td>
+                            <td class="p-4 text-gray-400 text-sm hidden md:table-cell">{{ formatDate(order.created_at) }}</td>
+                            <td class="p-4 text-gray-300 hidden sm:table-cell">{{ order.items ? order.items.length : 0 }}</td>
+                            <td class="p-4 text-white font-bold whitespace-nowrap">{{ formatCurrency(order.total_amount) }}</td>
                             <td class="p-4">
-                                <span :class="['px-2.5 py-1 rounded-full text-xs font-medium border capitalize', getStatusColor(order.status)]">
+                                <span :class="['px-2.5 py-1 rounded-full text-[10px] sm:text-xs font-medium border capitalize', getStatusColor(order.status)]">
                                     {{ order.status }}
                                 </span>
                             </td>
                             <td class="p-4 text-right">
-                                <div class="flex items-center justify-end gap-2">
+                                <div class="flex items-center justify-end gap-1 sm:gap-2">
                                      <button @click="openStatusModal(order)" class="p-1.5 text-gray-400 hover:text-white hover:bg-gray-700 rounded-lg transition-colors" title="Update Status">
-                                        <PencilSquareIcon class="w-5 h-5" />
+                                        <PencilSquareIcon class="w-4 h-4 sm:w-5 h-5" />
                                     </button>
                                     <button @click="openViewModal(order)" class="inline-flex p-1.5 text-gray-400 hover:text-white hover:bg-gray-700 rounded-lg transition-colors" title="View Details">
-                                        <EyeIcon class="w-5 h-5" />
+                                        <EyeIcon class="w-4 h-4 sm:w-5 h-5" />
                                     </button>
                                 </div>
                             </td>

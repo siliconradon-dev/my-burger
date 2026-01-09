@@ -50,19 +50,19 @@ const getImageUrl = (path) => {
         </div>
 
         <!-- Filters & Search -->
-        <div class="bg-gray-800 p-4 rounded-t-xl border-b border-gray-700 flex flex-col sm:flex-row gap-4 justify-between items-center">
-            <div class="relative w-full sm:w-64">
+        <div class="bg-gray-800 p-4 rounded-t-xl border-b border-gray-700 flex flex-col lg:flex-row gap-4 justify-between items-center">
+            <div class="relative w-full lg:w-64">
                 <MagnifyingGlassIcon class="w-5 h-5 absolute left-3 top-2.5 text-gray-500" />
                 <input type="text" placeholder="Search products..." class="w-full bg-gray-900 border border-gray-700 text-gray-300 rounded-lg pl-10 pr-4 py-2 focus:ring-1 focus:ring-red-500 focus:border-red-500 placeholder-gray-600" />
             </div>
-            <div class="flex gap-2">
-                <select class="bg-gray-900 border border-gray-700 text-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-1 focus:ring-red-500">
+            <div class="flex flex-wrap sm:flex-nowrap gap-2 w-full lg:w-auto">
+                <select class="w-1/2 sm:w-auto bg-gray-900 border border-gray-700 text-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-1 focus:ring-red-500 flex-1">
                     <option>All Categories</option>
                     <option>Burgers</option>
                     <option>Sides</option>
                     <option>Beverages</option>
                 </select>
-                <select class="bg-gray-900 border border-gray-700 text-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-1 focus:ring-red-500">
+                <select class="w-1/2 sm:w-auto bg-gray-900 border border-gray-700 text-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-1 focus:ring-red-500 flex-1">
                     <option>All Status</option>
                     <option>Active</option>
                     <option>Out of Stock</option>
@@ -77,9 +77,9 @@ const getImageUrl = (path) => {
                     <thead>
                         <tr class="bg-gray-900/50 text-gray-400 text-xs uppercase tracking-wider border-b border-gray-700">
                             <th class="p-4 font-medium">Product</th>
-                            <th class="p-4 font-medium">Category</th>
+                            <th class="p-4 font-medium hidden md:table-cell">Category</th>
                             <th class="p-4 font-medium">Price</th>
-                            <th class="p-4 font-medium">Status</th>
+                            <th class="p-4 font-medium hidden sm:table-cell">Status</th>
                             <th class="p-4 font-medium text-right">Actions</th>
                         </tr>
                     </thead>
@@ -91,15 +91,18 @@ const getImageUrl = (path) => {
                                     <div v-else class="w-10 h-10 rounded-lg bg-gray-700 flex items-center justify-center text-gray-500">
                                         <PhotoIcon class="w-6 h-6" />
                                     </div>
-                                    <span class="font-medium text-white group-hover:text-red-400 transition-colors">{{ product.name }}</span>
+                                    <div class="flex flex-col">
+                                        <span class="font-medium text-white group-hover:text-red-400 transition-colors">{{ product.name }}</span>
+                                        <span class="text-xs text-gray-500 md:hidden">{{ product.category ? product.category.name : 'Uncategorized' }}</span>
+                                    </div>
                                 </div>
                             </td>
-                            <td class="p-4 text-gray-300">
+                            <td class="p-4 text-gray-300 hidden md:table-cell">
                                 <span v-if="product.category" class="bg-gray-700 px-2 py-1 rounded text-xs">{{ product.category.name }}</span>
                                 <span v-else class="text-gray-500 italic">Uncategorized</span>
                             </td>
-                            <td class="p-4 text-white font-medium">Rs. {{ product.price }}</td>
-                            <td class="p-4">
+                            <td class="p-4 text-white font-medium whitespace-nowrap">Rs. {{ product.price }}</td>
+                            <td class="p-4 hidden sm:table-cell">
                                 <span :class="['px-2.5 py-1 rounded-full text-xs font-medium border capitalize', getStatusColor(product.status)]">
                                     {{ product.status ? product.status.replace('_', ' ') : '' }}
                                 </span>

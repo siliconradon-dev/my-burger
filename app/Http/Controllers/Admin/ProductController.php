@@ -48,7 +48,7 @@ class ProductController extends Controller
             'price' => $request->price,
             'status' => $request->status,
             'description' => $request->description,
-            'image' => $imagePath ? '/storage/' . $imagePath : null,
+            'image' => $imagePath ? \Illuminate\Support\Facades\Storage::url($imagePath) : null,
         ]);
 
         \RealRashid\SweetAlert\Facades\Alert::success('Success', 'Product created successfully.');

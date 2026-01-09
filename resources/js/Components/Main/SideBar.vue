@@ -8,10 +8,19 @@ import {
     Cog6ToothIcon,
     Bars3Icon 
 } from '@heroicons/vue/24/outline';
+
+defineProps({
+    isOpen: Boolean
+});
 </script>
 
 <template>
-    <aside class="w-64 bg-gray-900 border-r border-gray-800 hidden md:block min-h-screen">
+    <aside 
+        :class="[
+            isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0',
+            'fixed inset-y-0 left-0 z-30 w-64 bg-gray-900 border-r border-gray-800 transition-transform duration-300 ease-in-out lg:static lg:inset-0'
+        ]"
+    >
         <div class="h-16 flex items-center justify-center border-b border-gray-800">
             <h1 class="text-2xl font-bold text-red-600">My Burger</h1>
         </div>
