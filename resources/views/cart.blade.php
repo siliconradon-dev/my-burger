@@ -1,3 +1,5 @@
+@extends('layouts.master')
+@section('content')
 <!DOCTYPE html>
 <html lang="zxx">
 <!--<< Header Area >>-->
@@ -526,6 +528,153 @@
                 max-width: 100% !important;
                 white-space: normal !important;
             }
+
+            /* --- Responsive Cart Table --- */
+            .cart_table, .cart_table tbody, .cart_table tr, .cart_table td {
+                display: block !important;
+                width: 100% !important;
+            }
+
+            .cart_table thead {
+                display: none !important;
+            }
+
+            .cart_table tbody tr {
+                margin-bottom: 20px;
+                border: 1px solid #333;
+                background: #1a1a1a;
+                border-radius: 8px;
+                overflow: hidden;
+                box-sizing: border-box; /* Ensure padding doesn't affect width */
+                width: auto !important; /* Allow margin to take effect */
+                margin-left: 2px;
+                margin-right: 2px;
+            }
+
+            .cart_table tbody tr td {
+             
+                justify-content: space-between !important;
+                align-items: center !important;
+                border-bottom: 1px solid #333 !important;
+                padding: 15px !important;
+                font-size: 14px; 
+            }
+
+            .cart_table tbody tr td:last-child {
+                border-bottom: none !important;
+            }
+
+            /* Label (Product, Price, etc.) */
+            .cart_table tbody tr td::before {
+                content: attr(data-title);
+                font-weight: 700;
+                color: #fff;
+                text-transform: uppercase;
+                font-size: 12px;
+                flex: 0 0 30%; /* Reduced width to prevent overlap */
+                text-align: left;
+                padding-right: 5px;
+            }
+
+            /* Content Alignment */
+            .cart_table tbody tr td > * {
+                flex: 1;
+                text-align: right;
+                word-break: break-word; /* Ensure long words wrap */
+                min-width: 0; /* Allow flex item to shrink properly */
+            }
+
+            /* Image Specifics */
+            .cart_table .cartimage {
+                display: block;
+                width: 60px;
+                height: 60px;
+                margin-left: auto; /* Push to right */
+            }
+
+            .cart_table .cartimage img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 4px;
+            }
+
+            /* Quantity Control Specifics */
+            .cart_table td[data-title="Quantity"] {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+            }
+
+            .cart_table .quantity {
+                display: inline-flex;
+                align-items: center;
+                justify-content: flex-end;
+                margin-left: 170px; /* Push to right */
+                gap: 5px; /* Space between buttons */
+            }
+            
+            .cart_table .quantity button {
+                 width: 30px; 
+                 height: 30px;
+                 padding: 0;
+                 display: flex;
+                 align-items: center;
+                 justify-content: center;
+            }
+
+            .cart_table .quantity input {
+                width: 40px;
+                height: 30px;
+                text-align: center;
+                margin: 0;
+            }
+
+            /* Remove Button */
+            .cart_table .remove {
+                margin-left: auto;
+                display: inline-block;
+            }
+
+            /* Stack Coupon Section and Actions */
+            .th-cart-coupon {
+                float: none;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                margin-bottom: 20px;
+            }
+
+            .th-cart-coupon .form-control {
+                width: 100%;
+            }
+
+            .actions {
+                display: block !important;
+                text-align: center;
+            }
+            
+            .actions .th-cart-coupon {
+                 margin-bottom: 20px !important;
+            }
+
+            .actions > .theme-btn {
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                float: none !important;
+                width: 100% !important;
+                margin-bottom: 15px !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                text-align: center !important;
+            }    
+                
+            
+            .actions > .theme-btn:last-child {
+                margin-bottom: 0 !important;
+            }
         }
 
         /* Fix Cart Dropdown Visibility */
@@ -573,6 +722,296 @@
 
         .mean-container .mean-bar {
             background: transparent !important;
+        }
+        /* --- Cart specific enhancements --- */
+        /* --- Cart specific enhancements --- */
+        .cart_table {
+            border: 1px solid #333;
+            background: #1a1a1a;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+
+        .cart_table thead {
+             background-color: #222 !important;
+        }
+
+        .cart_table thead tr th, 
+        .cart_table thead th {
+            background-color: #222 !important;
+            color: #fff !important;
+            border-bottom: 2px solid #333 !important;
+            border-top: none !important;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 15px !important;
+        }
+
+        .cart_table tbody tr td {
+            background-color: #1a1a1a !important;
+            border-bottom: 1px solid #333 !important;
+            color: #ccc;
+            padding: 20px 15px !important;
+            vertical-align: middle;
+        }
+
+        .cart_table tbody tr:last-child td {
+            border-bottom: none !important;
+        }
+
+        .cart_table .cartname {
+            color: #fff !important;
+            font-size: 18px;
+            font-weight: 600;
+            text-transform: capitalize;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cart_table .cartname:hover {
+            color: #d90429 !important;
+        }
+
+        .cart_table .amount {
+            color: #d90429 !important;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .cart_table .remove {
+            color: #666 !important;
+            font-size: 18px;
+            transition: 0.3s;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+            background: #222;
+        }
+
+        .cart_table .remove:hover {
+            color: #fff !important;
+            background: #d90429;
+        }
+
+        .cart_table .cartimage {
+            display: block;
+            width: 90px;
+            height: 90px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+        
+        .cart_table .cartimage img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Quantity Buttons */
+        .quantity {
+            background: #222;
+            border: 1px solid #444;
+            border-radius: 30px; /* Rounded pill shape */
+            display: inline-flex;
+            align-items: center;
+            padding: 5px;
+        }
+
+        .quantity .qty-btn {
+            background: transparent;
+            border: none;
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .quantity .qty-btn:hover {
+            background: #d90429;
+            color: #fff;
+        }
+
+        .quantity .qty-input {
+            background: transparent !important;
+            border: none !important;
+            color: #fff !important;
+            text-align: center;
+            width: 40px;
+            font-weight: 700;
+            padding: 0;
+            height: auto !important;
+        }
+
+        /* Coupon Section */
+        .actions {
+            background: #111 !important;
+            padding: 20px !important;
+        }
+
+        .th-cart-coupon {
+            display: flex;
+            gap: 10px;
+            float: left;
+        }
+
+        .th-cart-coupon .form-control {
+            background-color: #222 !important;
+            border: 1px solid #444 !important;
+            color: #fff !important;
+            height: 50px;
+            border-radius: 5px;
+            width: 200px;
+        }
+        
+        .th-cart-coupon .form-control::placeholder {
+            color: #777 !important;
+        }
+
+        .theme-btn {
+            border-radius: 5px;
+            height: 50px;
+            padding: 0 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 14px;
+            border: none;
+            margin-left: 10px;
+        }
+        
+        .actions > .theme-btn {
+             float: right;
+        }
+
+        /* Cart Totals */
+        .summary-title {
+            background: #1a1a1a;
+            padding: 15px 20px;
+            border-bottom: 2px solid #333;
+            margin-bottom: 0;
+            margin-top: 30px;
+            border-radius: 8px 8px 0 0;
+            font-size: 22px;
+            color: #fff !important;
+        }
+
+        .cart_totals {
+            border: 1px solid #333;
+            background: #1a1a1a !important;
+            border-radius: 0 0 8px 8px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .cart_totals tbody tr td, 
+        .cart_totals tbody tr th,
+        .cart_totals tfoot tr td, 
+        .cart_totals tfoot tr th {
+            background-color: #1a1a1a !important; /* Force dark background */
+            border-bottom: 1px solid #333;
+            padding: 15px 20px;
+            color: #ccc;
+        }
+        
+        /* Specific targeting for the first column which might be behaving like a header or just a first child */
+        .cart_totals tr td:first-child,
+        .cart_totals tr th:first-child {
+             background-color: #1a1a1a !important;
+             color: #fff !important;
+             font-weight: 600;
+        }
+        
+        .cart_totals tbody tr th {
+            width: 40%;
+            font-weight: 600;
+            color: #fff;
+            background-color: #1a1a1a !important;
+        }
+
+        .cart_totals .amount {
+            color: #d90429 !important;
+            font-weight: 700;
+        }
+
+        .cart_totals .order-total .amount {
+            font-size: 24px;
+        }
+        
+        .cart_totals .order-total th {
+             color: #d90429;
+             font-size: 18px;
+        }
+
+        /* Shipping Calculator */
+        .shipping-calculator-form {
+            margin-top: 15px;
+        }
+        
+        .shipping-calculator-form .form-select,
+        .shipping-calculator-form .form-control {
+             background-color: #222 !important;
+             border: 1px solid #444 !important;
+             color: #fff !important;
+             margin-bottom: 10px;
+             border-radius: 5px;
+             height: 45px;
+        }
+
+        .shipping-calculator-button {
+            color: #d90429;
+            text-decoration: underline;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .woocommerce-shipping-methods {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .woocommerce-shipping-methods li {
+            list-style: none;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .woocommerce-shipping-methods input[type="radio"] {
+            accent-color: #d90429;
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
+            background: #222;
+        }
+        
+        .woocommerce-shipping-methods label {
+            color: #ccc;
+            cursor: pointer;
+        }
+
+        /* Proceed to checkout */
+        .wc-proceed-to-checkout .theme-btn {
+            width: 100%;
+            margin: 0;
+            height: 60px;
+            font-size: 16px;
+            border-radius: 8px;
         }
     </style>
 
@@ -639,7 +1078,7 @@
     </button>
 
     <!-- Navbar Placeholder -->
-    <div id="navbar-placeholder"></div>
+
 
 
 
@@ -652,7 +1091,7 @@
                         <div class="breadcumb-content">
                             <h1 class="breadcumb-title">Cart List</h1>
                             <ul class="breadcumb-menu">
-                                <li><a href="index.html">Home</a></li>
+                                <li><a href="/">Home</a></li>
                                 <li class="text-white">/</li>
                                 <li class="active">Cart List</li>
                             </ul>
@@ -685,106 +1124,39 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @forelse($cartItems as $item)
                         <tr class="cart_item">
                             <td data-title="Product">
-                                <a class="cartimage" href="shop-details.html"><img width="91" height="91"
-                                        src="assets/img/dishes/dishes4_1.png" alt="Image"></a>
+                                <a class="cartimage" href="{{ route('shop.details', $item->product->id) }}">
+                                    <img width="91" height="91" src="{{ $item->product->image ? asset($item->product->image) : asset('assets/img/dishes/placeholder.png') }}" alt="{{ $item->product->name }}">
+                                </a>
                             </td>
                             <td data-title="Name">
-                                <a class="cartname" href="shop-details.html">BBQ Bacon Burger</a>
+                                <a class="cartname" href="{{ route('shop.details', $item->product->id) }}">{{ $item->product->name }}</a>
                             </td>
                             <td data-title="Price">
-                                <span class="amount"><bdi><span>$</span>18</bdi></span>
+                                <span class="amount"><bdi><span>Rs. </span>{{ number_format($item->product->price, 2) }}</bdi></span>
                             </td>
                             <td data-title="Quantity">
                                 <div class="quantity">
                                     <button class="quantity-minus qty-btn"><i class="far fa-minus"></i></button>
-                                    <input type="number" class="qty-input" value="1" min="1" max="99">
+                                    <input type="number" class="qty-input" value="{{ $item->quantity }}" min="1">
                                     <button class="quantity-plus qty-btn"><i class="far fa-plus"></i></button>
                                 </div>
                             </td>
                             <td data-title="Total">
-                                <span class="amount"><bdi><span>$</span>18</bdi></span>
+                                <span class="amount"><bdi><span>Rs. </span>{{ number_format($item->product->price * $item->quantity, 2) }}</bdi></span>
                             </td>
                             <td data-title="Remove">
                                 <a href="#" class="remove"><i class="fal fa-trash-alt"></i></a>
                             </td>
                         </tr>
-                        <tr class="cart_item">
-                            <td data-title="Product">
-                                <a class="cartimage" href="shop-details.html"><img width="91" height="91"
-                                        src="assets/img/dishes/dishes4_2.png" alt="Image"></a>
-                            </td>
-                            <td data-title="Name">
-                                <a class="cartname" href="shop-details.html">Classic Cheese Burger</a>
-                            </td>
-                            <td data-title="Price">
-                                <span class="amount"><bdi><span>$</span>18</bdi></span>
-                            </td>
-                            <td data-title="Quantity">
-                                <div class="quantity">
-                                    <button class="quantity-minus qty-btn"><i class="far fa-minus"></i></button>
-                                    <input type="number" class="qty-input" value="1" min="1" max="99">
-                                    <button class="quantity-plus qty-btn"><i class="far fa-plus"></i></button>
-                                </div>
-                            </td>
-                            <td data-title="Total">
-                                <span class="amount"><bdi><span>$</span>18</bdi></span>
-                            </td>
-                            <td data-title="Remove">
-                                <a href="#" class="remove"><i class="fal fa-trash-alt"></i></a>
-                            </td>
+                        @empty
+                        <tr>
+                            <td colspan="6" class="text-center">Your cart is empty.</td>
                         </tr>
-                        <tr class="cart_item">
-                            <td data-title="Product">
-                                <a class="cartimage" href="shop-details.html"><img width="91" height="91"
-                                        src="assets/img/dishes/dishes4_3.png" alt="Image"></a>
-                            </td>
-                            <td data-title="Name">
-                                <a class="cartname" href="shop-details.html">Vegan Burger Deluxe</a>
-                            </td>
-                            <td data-title="Price">
-                                <span class="amount"><bdi><span>$</span>18</bdi></span>
-                            </td>
-                            <td data-title="Quantity">
-                                <div class="quantity">
-                                    <button class="quantity-minus qty-btn"><i class="far fa-minus"></i></button>
-                                    <input type="number" class="qty-input" value="1" min="1" max="99">
-                                    <button class="quantity-plus qty-btn"><i class="far fa-plus"></i></button>
-                                </div>
-                            </td>
-                            <td data-title="Total">
-                                <span class="amount"><bdi><span>$</span>18</bdi></span>
-                            </td>
-                            <td data-title="Remove">
-                                <a href="#" class="remove"><i class="fal fa-trash-alt"></i></a>
-                            </td>
-                        </tr>
-                        <tr class="cart_item">
-                            <td data-title="Product">
-                                <a class="cartimage" href="shop-details.html"><img width="91" height="91"
-                                        src="assets/img/dishes/dishes4_4.png" alt="Image"></a>
-                            </td>
-                            <td data-title="Name">
-                                <a class="cartname" href="shop-details.html">Spicy Chicken Burger</a>
-                            </td>
-                            <td data-title="Price">
-                                <span class="amount"><bdi><span>$</span>18</bdi></span>
-                            </td>
-                            <td data-title="Quantity">
-                                <div class="quantity">
-                                    <button class="quantity-minus qty-btn"><i class="far fa-minus"></i></button>
-                                    <input type="number" class="qty-input" value="1" min="1" max="99">
-                                    <button class="quantity-plus qty-btn"><i class="far fa-plus"></i></button>
-                                </div>
-                            </td>
-                            <td data-title="Total">
-                                <span class="amount"><bdi><span>$</span>18</bdi></span>
-                            </td>
-                            <td data-title="Remove">
-                                <a href="#" class="remove"><i class="fal fa-trash-alt"></i></a>
-                            </td>
-                        </tr>
+                        @endforelse
+
                         <tr>
                             <td colspan="6" class="actions">
                                 <div class="th-cart-coupon">
@@ -792,8 +1164,8 @@
                                     <button type="submit" class="theme-btn">Apply Coupon</button>
                                 </div>
 
-                                <a href="cart.html" class="theme-btn">Update cart</a>
-                                <a href="shop.html" class="theme-btn">Continue Shopping</a>
+                                <a href="/cart" class="theme-btn">Update cart</a>
+                                <a href="/shop" class="theme-btn">Continue Shopping</a>
                             </td>
                         </tr>
                     </tbody>
@@ -804,60 +1176,26 @@
                     <h2 class="h4 summary-title">Cart Totals</h2>
                     <table class="cart_totals">
                         <tbody>
+                            @php
+                                $subtotal = $cartItems->sum(function($item) {
+                                    return $item->product->price * $item->quantity;
+                                });
+                            @endphp
                             <tr>
                                 <td>Cart Subtotal</td>
                                 <td data-title="Cart Subtotal">
-                                    <span class="amount"><bdi><span>$</span>47</bdi></span>
+                                    <span class="amount"><bdi><span>Rs. </span>{{ number_format($subtotal, 2) }}</bdi></span>
                                 </td>
                             </tr>
                             <tr class="shipping">
-                                <th>Shipping and Handling</th>
-                                <td data-title="Shipping and Handling">
+                                <th>Shipping</th>
+                                <td data-title="Shipping">
                                     <ul class="woocommerce-shipping-methods list-unstyled">
                                         <li>
-                                            <input type="radio" id="free_shipping" name="shipping_method"
-                                                class="shipping_method">
+                                            <input type="radio" id="free_shipping" name="shipping_method" class="shipping_method" checked disabled>
                                             <label for="free_shipping">Free shipping</label>
                                         </li>
-                                        <li>
-                                            <input type="radio" id="flat_rate" name="shipping_method"
-                                                class="shipping_method" checked="checked">
-                                            <label for="flat_rate">Flat rate</label>
-                                        </li>
                                     </ul>
-                                    <p class="woocommerce-shipping-destination">
-                                        Shipping options will be updated during checkout.
-                                    </p>
-                                    <form action="#" method="post">
-                                        <a href="#" class="shipping-calculator-button">Change address</a>
-                                        <div class="shipping-calculator-form">
-                                            <p class="form-row">
-                                                <select class="form-select">
-                                                    <option value="AR">Argentina</option>
-                                                    <option value="AM">Armenia</option>
-                                                    <option value="BD" selected="selected">Bangladesh</option>
-                                                </select>
-                                            </p>
-                                            <p>
-                                                <select class="form-select">
-                                                    <option value="">Select an option…</option>
-                                                    <option value="BD-05">Bagerhat</option>
-                                                    <option value="BD-01">Bandarban</option>
-                                                    <option value="BD-02">Barguna</option>
-                                                    <option value="BD-06">Barishal</option>
-                                                </select>
-                                            </p>
-                                            <p class="form-row">
-                                                <input type="text" class="form-control" placeholder="Town / City">
-                                            </p>
-                                            <p class="form-row">
-                                                <input type="text" class="form-control" placeholder="Postcode / ZIP">
-                                            </p>
-                                            <p>
-                                                <button class="theme-btn btn-fw">Update</button>
-                                            </p>
-                                        </div>
-                                    </form>
                                 </td>
                             </tr>
                         </tbody>
@@ -865,13 +1203,13 @@
                             <tr class="order-total">
                                 <td>Order Total</td>
                                 <td data-title="Total">
-                                    <strong><span class="amount"><bdi><span>$</span>47</bdi></span></strong>
+                                    <strong><span class="amount"><bdi><span>Rs. </span>{{ number_format($subtotal, 2) }}</bdi></span></strong>
                                 </td>
                             </tr>
                         </tfoot>
                     </table>
                     <div class="wc-proceed-to-checkout mt-3">
-                        <a href="checkout.html" class="theme-btn btn-fw">Proceed to checkout</a>
+                        <a href="/checkout" class="theme-btn btn-fw">Proceed to checkout</a>
                     </div>
                 </div>
             </div>
@@ -918,3 +1256,4 @@
 <!-- Mirrored from gramentheme.com/html/fresheat/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Jul 2025 07:05:56 GMT -->
 
 </html>
+@endsection

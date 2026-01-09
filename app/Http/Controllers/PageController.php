@@ -51,7 +51,13 @@ class PageController extends Controller
 
     public function cart()
     {
-        return view('cart');
+        $cartItems = [];
+        if (\Illuminate\Support\Facades\Auth::check()) {
+            $cartItems = \App\Models\Cart::where('user_id', \Illuminate\Support\Facades\Auth::id())
+                            ->with('product')
+                            ->get();
+        }
+        return view('cart', compact('cartItems'));
     }
 
     public function checkout()
